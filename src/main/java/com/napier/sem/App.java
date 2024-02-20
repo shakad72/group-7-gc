@@ -9,16 +9,20 @@ public class App
      * Connection to MySQL database.
      */
     private Connection con = null;
+
     /**
      * Variables used to establish a connection to MySQL database.
      */
-    private static final String DB_HOST = "localhost";
+    private static final String DB_HOST = "db";  // Change to db when deploying using docker compose
     private static final int DB_PORT = 3306;
     private static final String DB_LOGIN = "root";
     private static final String DB_PASSWORD = "group-7-gc";
     private static final int DB_CONNECTION_ATTEMPTS = 10;
 
-
+    /**
+     * Application execution starts here.
+     * @param args Command line arguments
+     */
     public static void main(String[] args)
     {
         // Create new Application
@@ -50,7 +54,7 @@ public class App
 
         for (int i = 0; i < DB_CONNECTION_ATTEMPTS; ++i)
         {
-            System.out.printf("Connecting to database (attempt %d of %d)...\r\n", i+1, DB_CONNECTION_ATTEMPTS);
+            System.out.printf("Attempting to connect to database (attempt %d of %d)%n", i+1, DB_CONNECTION_ATTEMPTS);
             try
             {
                 // Connect to database
@@ -60,8 +64,8 @@ public class App
             }
             catch (SQLException e)
             {
-                System.out.println("Failed to connect to database attempt " + Integer.toString(i));
-                System.out.println(e.getMessage());
+                System.out.printf("Failed to connect to database due to error code: %d%n", e.getErrorCode());
+//                System.out.println(e.getMessage());
             }
             // Wait a bit before trying again to connect
             try {
