@@ -29,8 +29,8 @@ Software requirements:
 ----------------------
 
 - Upon successful DB connection, user should be presented with a top-level menu (report groups)
-- After making a top-level menu selection, the user should be presented with a list of reports for the group selected
-- Once a report is selected, the user should be prompted for the required criteria (eg. country) or M to return to the top-level menu
+- After making a top-level menu selection (or entering E to exit), the user should be presented with a list of reports for the group selected
+- Once a report is selected, the user should be prompted for the required criteria (eg. country) or P to return to the top-level menu
 - Validation of the required input should be performed before the report is executed
 - The report can be presented as a table with columns sized by scanning through the field names and all results returned
 - If no results are returned, rather than a table, the output "No results found!" can be displayed to the user
