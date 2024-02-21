@@ -9,7 +9,7 @@ The Scrum team is comprised of the following persons:
 - Shaka Dow
 - Wellington Ramsey
 
-# Requirements Met
+### Requirements Met
 
 0 requirements of 32 have been implemented, which is 0%
 
