@@ -9,6 +9,10 @@ The Scrum team is comprised of the following persons:
 - Shaka Dow
 - Wellington Ramsey
 
+# Requirements Met
+
+0 requirements of 32 have been implemented, which is 0%
+
 ## Development Tips
 
 - To run the MySQL docker image on your local PC during development, do the following:
