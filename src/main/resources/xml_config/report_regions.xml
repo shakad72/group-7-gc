@@ -1,0 +1,4 @@
+<report title="This report will lists all regions.">
+    <!-- %region% will be substitured by the region parameter -->
+    <sql>select distinct(region) as Region from country</sql>
+</report>

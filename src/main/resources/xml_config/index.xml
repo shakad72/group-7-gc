@@ -1,0 +1,11 @@
+<menu title="Main Menu" prompt="Please make a selection (1...3 or E)">
+    <!-- sample menu action (leads to another menu) -->
+    <menuItem id="1" action="menu" file="menu_countryReports.xml">Country Reports</menuItem>
+    <!-- sample report action (leads to a report where parameters are requested and then report is executed) -->
+    <menuItem id="2" action="report" file="report_countriesInRegion.xml">Sample Report #1 - List countries in a region</menuItem>
+    <!-- sample report action (leads to a report where parameters are requested and then report is executed) -->
+    <menuItem id="3" action="report" file="report_regions.xml">Sample Report #2 - list regions</menuItem>
+    <!-- no point in having a "previous" action here since this is the main menu -->
+    <!-- exit action that exist the application -->
+    <menuItem id="E" action="previous" >Exit</menuItem>
+</menu>

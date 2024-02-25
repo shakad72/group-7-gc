@@ -1,0 +1,7 @@
+<report title="Report of countries of a selected region showing the surface area and population">
+    <!-- %region% will be substitured by the region parameter -->
+    <sql>select Name as Country, SurfaceArea as 'Surface Area', Population from country where region="%region%"</sql>
+    <parameters>
+        <parameter name="region" prompt="Please enter a region eg. South America"/>
+    </parameters>
+</report>

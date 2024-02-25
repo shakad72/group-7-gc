@@ -1,0 +1,7 @@
+<menu title="Country Reports" prompt="Please make a selection (1 or P)">
+    <!-- sample report action -->
+    <menuItem id="1" action="report" file="report_countriesInRegion.xml">Sample Report #1 - List countries in a region (also listed in the main menu)</menuItem>
+    <!-- previous action returns to the menu that led to this -->
+    <menuItem id="P" action="previous" >Previous Menu</menuItem>
+    <!-- exit action can optionally be included -->
+</menu>
