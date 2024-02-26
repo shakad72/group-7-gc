@@ -15,7 +15,7 @@ public class App
     /**
      * Variables used to establish a connection to MySQL database.
      */
-    private static final String DB_HOST = "localhost";  // Change to db when deploying using docker compose
+    private static final String DB_HOST = "db";  // Change to db when deploying using docker compose
     private static final int DB_PORT = 3306;
     private static final String DB_LOGIN = "root";
     private static final String DB_PASSWORD = "group-7-gc";
