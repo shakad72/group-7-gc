@@ -106,7 +106,7 @@ public class ReportHandler {
             for (int x = 0; x < columnCount; x++) {
                 rowData[x] = results.getString(x + 1);
                 // Check if the column width needs to be adjusted to accommodate this data
-                if (rowData[x].length() > columnWidths[x]) {
+                if (rowData[x]!=null && (rowData[x].length() > columnWidths[x])) {
                     columnWidths[x] = rowData[x].length();
                 }
             }
@@ -140,7 +140,8 @@ public class ReportHandler {
         for (int y = 0; y < rowCount; y++) {
             System.out.print("|");
             for (int x = 0; x < columnCount; x++) {
-                System.out.printf("%-" + columnWidths[x] + "s|", data.get(y)[x]);
+                String cellData = data.get(y)[x]==null?"":data.get(y)[x];
+                System.out.printf("%-" + columnWidths[x] + "s|", cellData);
             }
             System.out.println();
         }

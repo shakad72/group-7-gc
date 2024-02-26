@@ -15,7 +15,7 @@ public class App
     /**
      * Variables used to establish a connection to MySQL database.
      */
-    private static final String DB_HOST = "db";  // Change to db when deploying using docker compose
+    private static final String DB_HOST = "localhost";  // Change to db when deploying using docker compose
     private static final int DB_PORT = 3306;
     private static final String DB_LOGIN = "root";
     private static final String DB_PASSWORD = "group-7-gc";
@@ -78,7 +78,7 @@ public class App
             }
             catch (SQLException e)
             {
-                System.out.printf("Failed to connect to database due to error code: %d%n", e.getErrorCode());
+                System.out.printf("Failed to connect to database due to error code %d%n. Please ensure the database is running and the DB_HOST variable is correctly set", e.getErrorCode());
 //                System.out.println(e.getMessage());
             }
             // Wait a bit before trying again to connect
