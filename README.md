@@ -9,9 +9,15 @@ The Scrum team is comprised of the following persons:
 - Shaka Dow
 - Wellington Ramsey
 
-### Requirements Met
+### Requirements Implemented
 
 2 requirements of 32 have been implemented, which is 6.25%
+
+## How to Use
+
+1. Type "docker-compose up -d" while in the path with the docker-compose.yml file. This will build and execute the containers, in detached mode, using docker-compose.
+2. Type "docker-compose exec app java -jar app-0.1.0.1-jar-with-dependencies.jar". This will execute the Java application and permit the user to provide input and see the output.
+3. Type "docker-compose down" when you are ready to stop and remove the containers.
 
 ## Development Tips
 

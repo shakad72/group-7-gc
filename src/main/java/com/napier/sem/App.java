@@ -29,23 +29,26 @@ public class App
     {
         // Connect to database
         App.connect();
-        // Display top menu (defined in index.xml file)
-        try {
-            // Get URL for the index.xml file in the resources directory
-            URL indexUrl = App.class.getClassLoader().getResource("xml_config/index.xml");
-            if(indexUrl==null){
-                System.out.println("Error: index.xml file was not found in the resources/xml_config directory");
-                System.exit(1);
-            }else{
-                new MenuHandler(indexUrl.toString());
+        // Was connection successful?
+        if(App.con!=null){
+            // Display top menu (defined in index.xml file)
+            try {
+                // Get URL for the index.xml file in the resources directory
+                URL indexUrl = App.class.getClassLoader().getResource("xml_config/index.xml");
+                if(indexUrl==null){
+                    System.out.println("Error: index.xml file was not found in the resources/xml_config directory");
+                    System.exit(1);
+                }else{
+                    new MenuHandler(indexUrl.toString());
+                }
+            } catch (IOException e) {
+                System.out.println("Error: IOException encountered while processing index.xml file");
             }
-        } catch (IOException e) {
-            System.out.println("Error: IOException encountered while processing index.xml file");
+            // Display message before ending application
+            System.out.println("Bye!");
+            // Disconnect from database
+            App.disconnect();
         }
-        // Display message before ending application
-        System.out.println("Bye!");
-        // Disconnect from database
-        App.disconnect();
     }
 
 
@@ -78,8 +81,7 @@ public class App
             }
             catch (SQLException e)
             {
-                System.out.printf("Failed to connect to database due to error code %d%n. Please ensure the database is running and the DB_HOST variable is correctly set", e.getErrorCode());
-//                System.out.println(e.getMessage());
+                // Made less verbose by not displaying exception
             }
             // Wait a bit before trying again to connect
             try {

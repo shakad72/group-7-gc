@@ -82,6 +82,7 @@ public class MenuHandler {
             System.out.printf("%s: ", this.menuPrompt);
             // Read menu selection
             Scanner scanner = new Scanner(System.in);
+            // If there is something in the scanner then clear it
             String input = scanner.nextLine();
             // Is selection valid?
             for (MenuItem i : menuItems) {
@@ -145,11 +146,5 @@ public class MenuHandler {
         } catch (IOException e) {
             System.out.println("Error: IOException encountered while processing "+item.getFile()+" file");
         }
-//        // Load a menu
-//        try {
-//            new MenuHandler(item.getFile());
-//        } catch (IOException e) {
-//            System.out.println(e.getMessage());
-//        }
     }
 }
