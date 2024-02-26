@@ -15,9 +15,10 @@ The Scrum team is comprised of the following persons:
 
 ## How to Use
 
-1. Type "docker-compose up -d" while in the path with the docker-compose.yml file. This will build and execute the containers, in detached mode, using docker-compose.
-2. Type "docker-compose exec app java -jar app-0.1.0.1-jar-with-dependencies.jar". This will execute the Java application and permit the user to provide input and see the output.
-3. Type "docker-compose down" when you are ready to stop and remove the containers.
+1. Type "mvn package" to compile and build the project. The JAR file will be in the target subdirectory.
+2. Type "docker-compose up -d". This will build and execute the containers, in detached mode, using docker-compose.
+3. Type "docker-compose exec app java -jar app-0.1.0.1-jar-with-dependencies.jar". This will execute the Java application (in the app container) and permit the user to provide input and see the output.
+4. Type "docker-compose down" when you are ready to stop and remove the containers.
 
 ## Development Tips
 
