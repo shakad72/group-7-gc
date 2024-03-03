@@ -21,13 +21,12 @@ public class ReportHandler {
     private final String sql;
     private final ArrayList<ReportParameter> reportParameters = new ArrayList<>();
 
+    public ReportHandler(String file) throws IOException{
+        // Create a MenuItem which references the XML report definition file and pass to another constructor
+        this(new MenuItem(null,"report",file,null));
+    }
+
     public ReportHandler(MenuItem item) throws IOException {
-        // Read XML file containing menu definitions
-//        try {
-//            String xml = Files.readString(Paths.get(item.getFile()));
-//        } catch (IOException e) {
-//            throw new IOException(e);
-//        }
         // Parse XML file
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder;
