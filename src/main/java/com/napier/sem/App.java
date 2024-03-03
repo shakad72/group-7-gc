@@ -31,18 +31,29 @@ public class App
         App.connect();
         // Was connection successful?
         if(App.con!=null){
-            // Display top menu (defined in index.xml file)
-            try {
-                // Get URL for the index.xml file in the resources directory
-                URL indexUrl = App.class.getClassLoader().getResource("xml_config/index.xml");
-                if(indexUrl==null){
-                    System.out.println("Error: index.xml file was not found in the resources/xml_config directory");
-                    System.exit(1);
-                }else{
-                    new MenuHandler(indexUrl.toString());
+            // Connection was successfully established!
+            // If an argument was supplieg (args[1]) then execute the report else be interactive
+            if(args.length>0){
+                // Run report
+                try {
+                    new ReportHandler(args[0]);
+                }catch(IOException e){
+                    System.out.println("Error: File not found at path " + args[1]);
                 }
-            } catch (IOException e) {
-                System.out.println("Error: IOException encountered while processing index.xml file");
+            }else{
+                // Display top menu (defined in index.xml file)
+                try {
+                    // Get URL for the index.xml file in the resources directory
+                    URL indexUrl = App.class.getClassLoader().getResource("xml_config/index.xml");
+                    if(indexUrl==null){
+                        System.out.println("Error: index.xml file was not found in the resources/xml_config directory");
+                        System.exit(1);
+                    }else{
+                        new MenuHandler(indexUrl.toString());
+                    }
+                } catch (IOException e) {
+                    System.out.println("Error: IOException encountered while processing index.xml file");
+                }
             }
             // Display message before ending application
             System.out.println("Bye!");
