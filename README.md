@@ -2,6 +2,7 @@
 
 Group project for the development of Java software, for a fictitious organisation, that reports on population information. 
 The Scrum team is comprised of the following persons:
+
 - Ahnaf Faiz
 - Kingsley Forbes
 - Maria Fernandez
@@ -35,6 +36,8 @@ The Scrum team is comprised of the following persons:
 Software requirements:
 ----------------------
 
+- Software should permit non-interactive execution where user input is not required. This will be useful for automated testing
+- Software should permit interactive execution where users can navigate through a hierarchy of menus to select the report they want to view
 - Upon successful DB connection, user should be presented with a top-level menu (report groups)
 - After making a top-level menu selection (or entering E to exit), the user should be presented with a list of reports for the group selected
 - Once a report is selected, the user should be prompted for the required criteria (eg. country) or P to return to the top-level menu
@@ -69,14 +72,13 @@ Software requirements:
 
     Please make a selection (1-7 or B): 1
     Please enter the continent or type M to return to the menu: South America
-    
-    ----------------------------------
-    Report on whatever
-    ----------------------------------
+
+    Sample report
+    +------------+-------------------+
     | Country    | Population        |
-    ----------------------------------
+    +------------+-------------------+
     | Country 1  | XXXXXX            |
     | Country 2  | YYYYYY            |
-    ----------------------------------
+    +------------+-------------------+
     
     ----> User is returned to the top menu
