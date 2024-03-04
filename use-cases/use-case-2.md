@@ -8,7 +8,7 @@ As a user, I want to retrieve and organize country population data within a spec
 
 ### Scope
 
-The system under consideration is the component responsible for retrieving and organizing country population data within a specified continent.
+Company.
 
 ### Level
 
