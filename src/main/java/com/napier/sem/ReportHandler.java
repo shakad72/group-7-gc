@@ -15,21 +15,44 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+
+/**
+ * Class that will read an XML report definition file, ask for required input, execute the SQL query, then display results.
+ * Will adjust the column widths to the widest value for each column (including the heading).
+ */
 public class ReportHandler {
 
+    // Variable that will hold the title of the report
     private final String reportTitle;
+    // Variable that will hold the SQL query
     private final String sql;
+    // Variable that will hold the report parameters needed by the SQL query
     private final ArrayList<ReportParameter> reportParameters = new ArrayList<>();
 
+
+    /**
+     * Class constructor that will immediately display the report passed as an argument.
+     *
+     * @param file XML report desinition file eg. xml_config/country_reports/report_countryReport1.xml
+     * @throws IOException
+     */
     public ReportHandler(String file) throws IOException{
         // Create a MenuItem which references the XML report definition file and pass to another constructor
         this(new MenuItem(null,"report",file,null));
     }
 
+
+    /**
+     * Class constructor that will display the report pointed to by the passed MenuItem object.
+     *
+     * @param item reference to MenuItem object that has the path to the XML report definition file
+     * @throws IOException
+     */
     public ReportHandler(MenuItem item) throws IOException {
-        // Parse XML file
+        // Instantiate a document builder factory
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder;
+        // Attempt to process the report
         try {
             builder = factory.newDocumentBuilder();
             // Get URL for the index.xml file in the resources directory
@@ -69,6 +92,12 @@ public class ReportHandler {
         displayReport(sqlWithParameters);
     }
 
+
+    /**
+     * Method that will execute SQL statement with parameters substituted and then display the formatted results.
+     *
+     * @param sqlWithParameters SQL statement
+     */
     private void displayReport(String sqlWithParameters) {
         // Display report
         try {
@@ -76,12 +105,14 @@ public class ReportHandler {
             ResultSet results = stmt.executeQuery(sqlWithParameters);
             displaySQLResults(results);
         } catch (SQLException e) {
+            // Display the SQL exception if one was encountered
             throw new RuntimeException(e);
         }
     }
 
+
     /**
-     * Display SQL results as a table
+     * Method that will display SQL results as a table.
      *
      * @param results ResultSet of executed SQL query
      */
@@ -149,12 +180,18 @@ public class ReportHandler {
         System.out.println();
     }
 
+
+    /**
+     * Method that will insert parameters obtained from the user into the SQL query.
+     * @return
+     */
     private String insertParameters() {
         String sqlWithParameters = this.sql;
         // Insert parameters into SQL query using basic string substitution
         for (ReportParameter param : this.reportParameters) {
             sqlWithParameters = sqlWithParameters.replaceAll("%" + param.getName() + "%", param.getValue());
         }
+        // Return SQL statement with parameters inserted
         return sqlWithParameters;
     }
 }
