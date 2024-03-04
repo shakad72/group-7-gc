@@ -2,11 +2,11 @@
 
 ## Goal in Context
 
-To provide the user with a sorted list of all cities in a specific country, organized by population from largest to smallest.
+As a user, I want to sort a list of all cities in a specific country, organized by population from largest to smallest so that I can easily identify the most populous cities within the country.
 
 ## Scope
 
-The system under consideration is responsible for retrieving and organizing city population data within a specified country.
+Company
 
 ## Level
 
@@ -14,20 +14,19 @@ Primary Task
 
 ## Preconditions
 
-- The system has access to a reliable dataset containing information about cities and their populations.
-- The user specifies the country for which they want to retrieve the list of cities.
+- We know the country. The system has access to a reliable dataset containing information about cities and their populations.
 
 ## Success End Condition
 
-The user receives a sorted list of all cities within the specified country, organized by population from largest to smallest.
+A sorted list of all cities within the specified country, organized by population from largest to smallest is produced.
 
 ## Failed End Condition
 
-The user does not receive the sorted list of cities due to errors in data retrieval or if the dataset is unavailable.
+No report is produced.
 
 ## Primary Actor
 
-User
+Clerical User
 
 ## Trigger
 
