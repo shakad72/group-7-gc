@@ -4,7 +4,7 @@
 
 ### Goal in Context
 
-To organize all the countries within a specific region by their population, from largest to smallest, providing users with valuable insights into the demographics of that region.
+As a user, I want to organize all the countries within a specific region by their population, from largest to smallest, so that I can provide valuable insights into the demographics of that region.
 
 ### Scope
 
