@@ -2,7 +2,7 @@
 
 ## Goal in Context
 
-As a user, I want to retrieve the population of a continent so that I can analyze demographic trends of people within that continent.
+As a user, I want to retrieve the population of a continent so that I can analyze demographic trends of people within a continent.
 
 ## Scope
 
