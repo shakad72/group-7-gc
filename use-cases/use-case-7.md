@@ -4,7 +4,7 @@
 
 ### Goal in Context
 
-As a user, I want to sort a list of all cities in the world, organized by population from largest to smallest.
+As a user, I want to sort a list of all cities in the world, organized by population from largest to smallest so that I can gain insights into the most populous urban centers globally.
 
 ### Scope
 
