@@ -14,7 +14,7 @@ Primary Task
 
 ## Preconditions
 
-- The system has access to a reliable dataset containing information about region-wise population statistics.
+- We know the region. The system has access to a reliable dataset containing information about region-wise population statistics.
 
 ## Success End Condition
 
