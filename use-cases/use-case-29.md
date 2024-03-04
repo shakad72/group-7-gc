@@ -18,7 +18,7 @@ Primary Task
 
 ## Success End Condition
 
-A report containing the population of the specified country is successfully produced and provided to the user.
+A report containing the population of the specified country is produced.
 
 ## Failed End Condition
 
