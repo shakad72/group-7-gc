@@ -19,10 +19,10 @@ public class MenuItem {
     /**
      * Class contructor that accepts all the attributes as parameters.
      *
-     * @param id
-     * @param action
-     * @param file
-     * @param message
+     * @param id id attribute in the menuItem XML element
+     * @param action action attribute in the menuItem XML element
+     * @param file file attribute in the menuItem XML element
+     * @param message message attribute in the menuItem XML element
      */
     public MenuItem(String id, String action, String file, String message){
         this.id = id;
