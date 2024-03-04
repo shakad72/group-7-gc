@@ -16,12 +16,11 @@ Primary Task
 
 ### Preconditions
 
-- The system has access to a reliable dataset containing information about countries and their populations.
-- I specify the value of **(N)** *(number of countries)* I want to retrieve.
+We know the number of populated countries. The system has access to a reliable dataset containing information about countries and their populations.
 
 ### Success End Condition
 
-I receive a list of the top **(N)** populated countries in the world, organized by population.
+A list of the top **(N)** populated countries in the world, organized by population is produced.
 
 ### Failed End Condition
 
