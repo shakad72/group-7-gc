@@ -34,7 +34,7 @@ public class ReportHandler {
      * Class constructor that will immediately display the report passed as an argument.
      *
      * @param file XML report desinition file eg. xml_config/country_reports/report_countryReport1.xml
-     * @throws IOException
+     * @throws IOException Thrown when the specified file could not be found
      */
     public ReportHandler(String file) throws IOException{
         // Create a MenuItem which references the XML report definition file and pass to another constructor
@@ -46,7 +46,7 @@ public class ReportHandler {
      * Class constructor that will display the report pointed to by the passed MenuItem object.
      *
      * @param item reference to MenuItem object that has the path to the XML report definition file
-     * @throws IOException
+     * @throws IOException Thrown when the file pointed to in the MenuItem object could not be found
      */
     public ReportHandler(MenuItem item) throws IOException {
         // Instantiate a document builder factory
@@ -183,7 +183,8 @@ public class ReportHandler {
 
     /**
      * Method that will insert parameters obtained from the user into the SQL query.
-     * @return
+     *
+     * @return SQL query with parameters inserted
      */
     private String insertParameters() {
         String sqlWithParameters = this.sql;
