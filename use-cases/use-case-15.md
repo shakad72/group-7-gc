@@ -26,7 +26,7 @@ No report is produced.
 
 ## Primary Actor
 
-User
+Clerical User
 
 ## Trigger
 
