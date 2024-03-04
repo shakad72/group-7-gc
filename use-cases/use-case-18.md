@@ -2,11 +2,11 @@
 
 ## Goal in Context
 
-To provide the user with a sorted list of all capital cities in a specific continent, organized by population from largest to smallest.
+As a user, I want a sorted list of all capital cities in a specific continent, organized by population from largest to smallest so that I can analyze the demographic landscape of capital cities within that continent.
 
 ## Scope
 
-The system under consideration is responsible for retrieving and organizing capital city population data within a specified continent.
+Company
 
 ## Level
 
@@ -14,22 +14,21 @@ Primary Task
 
 ## Preconditions
 
-- The system has access to a reliable dataset containing information about capital cities and their populations.
+- We know the continent. The system has access to a reliable dataset containing information about capital cities and their populations.
 - The dataset distinguishes capital cities from other cities.
 - Capital cities are correctly identified in the dataset.
-- The user specifies the continent for which they want to retrieve the list of capital cities.
 
 ## Success End Condition
 
-The user receives a sorted list of all capital cities within the specified continent, organized by population from largest to smallest.
+A report with a sorted list of all capital cities within the specified continent, organized by population from largest to smallest is produced.
 
 ## Failed End Condition
 
-The user does not receive the sorted list of capital cities due to errors in data retrieval or if the dataset is unavailable.
+No report is produced. 
 
 ## Primary Actor
 
-User
+Clerical User
 
 ## Trigger
 
