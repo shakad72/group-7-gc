@@ -4,7 +4,7 @@
 
 ### Goal in Context
 
-To provide the user with the option to retrieve the top **N** populated countries in the world, where **N** is specified by the user.
+As a user, I want the option to retrieve the top **N** populated countries in the world, where **N** is specified by me, so that I can gain insights into the most populous countries according to my preferences.
 
 ### Scope
 
