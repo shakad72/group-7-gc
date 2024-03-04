@@ -18,7 +18,7 @@ Primary Task
 
 ## Success End Condition
 
-A report containing the population of the specified district is successfully produced.
+A report containing the population of the specified district is produced.
 
 ## Failed End Condition
 
