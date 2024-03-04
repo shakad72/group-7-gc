@@ -4,7 +4,7 @@
 
 ### Goal in Context
 
-To organize all the countries within a continent by their population, from largest to smallest, providing users with valuable insights into the demographics of the continent.
+As a user, I want to retrieve and organize country population data within a specified continent so that I can analyze demographic trends and understand population distributions in that particular continent.
 
 ### Scope
 
