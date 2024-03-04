@@ -2,11 +2,11 @@
 
 ## Goal in Context
 
-To provide the user with the option to retrieve the top **N** populated cities in a specific district, where **N** is specified by the user.
+As a user, I want the option to retrieve the top **(N)** populated cities in a specific district, where **(N)** is specified, so that I can obtain a list of the most populous cities within that district.
 
 ## Scope
 
-The system under consideration is responsible for retrieving and organizing city population data within a specified district.
+Company
 
 ## Level
 
@@ -14,20 +14,20 @@ Primary Task
 
 ## Preconditions
 
-- The system has access to a reliable dataset containing information about cities and their populations.
-- The user specifies the district for which they want to retrieve the top **N** populated cities.
+- We know the district for the top **(N)** populated cities. The system has access to a reliable dataset containing information about cities and their populations.
+
 
 ## Success End Condition
 
-The user receives a list of the top **N** populated cities within the specified district, organized by population.
+A report of the top **N** populated cities within the specified district, organized by population is produced.
 
 ## Failed End Condition
 
-The user does not receive the list of cities due to errors in data retrieval or if the dataset is unavailable.
+No report is produced.
 
 ## Primary Actor
 
-User
+Clerical User
 
 ## Trigger
 
