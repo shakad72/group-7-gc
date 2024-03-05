@@ -1,0 +1,232 @@
+<DATA>
+
+	<ROW>
+		<name>Russian Federation</name>
+		<Population>146934000</Population>
+	</ROW>
+
+	<ROW>
+		<name>Germany</name>
+		<Population>82164700</Population>
+	</ROW>
+
+	<ROW>
+		<name>United Kingdom</name>
+		<Population>59623400</Population>
+	</ROW>
+
+	<ROW>
+		<name>France</name>
+		<Population>59225700</Population>
+	</ROW>
+
+	<ROW>
+		<name>Italy</name>
+		<Population>57680000</Population>
+	</ROW>
+
+	<ROW>
+		<name>Ukraine</name>
+		<Population>50456000</Population>
+	</ROW>
+
+	<ROW>
+		<name>Spain</name>
+		<Population>39441700</Population>
+	</ROW>
+
+	<ROW>
+		<name>Poland</name>
+		<Population>38653600</Population>
+	</ROW>
+
+	<ROW>
+		<name>Romania</name>
+		<Population>22455500</Population>
+	</ROW>
+
+	<ROW>
+		<name>Netherlands</name>
+		<Population>15864000</Population>
+	</ROW>
+
+	<ROW>
+		<name>Yugoslavia</name>
+		<Population>10640000</Population>
+	</ROW>
+
+	<ROW>
+		<name>Greece</name>
+		<Population>10545700</Population>
+	</ROW>
+
+	<ROW>
+		<name>Czech Republic</name>
+		<Population>10278100</Population>
+	</ROW>
+
+	<ROW>
+		<name>Belgium</name>
+		<Population>10239000</Population>
+	</ROW>
+
+	<ROW>
+		<name>Belarus</name>
+		<Population>10236000</Population>
+	</ROW>
+
+	<ROW>
+		<name>Hungary</name>
+		<Population>10043200</Population>
+	</ROW>
+
+	<ROW>
+		<name>Portugal</name>
+		<Population>9997600</Population>
+	</ROW>
+
+	<ROW>
+		<name>Sweden</name>
+		<Population>8861400</Population>
+	</ROW>
+
+	<ROW>
+		<name>Bulgaria</name>
+		<Population>8190900</Population>
+	</ROW>
+
+	<ROW>
+		<name>Austria</name>
+		<Population>8091800</Population>
+	</ROW>
+
+	<ROW>
+		<name>Switzerland</name>
+		<Population>7160400</Population>
+	</ROW>
+
+	<ROW>
+		<name>Slovakia</name>
+		<Population>5398700</Population>
+	</ROW>
+
+	<ROW>
+		<name>Denmark</name>
+		<Population>5330000</Population>
+	</ROW>
+
+	<ROW>
+		<name>Finland</name>
+		<Population>5171300</Population>
+	</ROW>
+
+	<ROW>
+		<name>Norway</name>
+		<Population>4478500</Population>
+	</ROW>
+
+	<ROW>
+		<name>Croatia</name>
+		<Population>4473000</Population>
+	</ROW>
+
+	<ROW>
+		<name>Moldova</name>
+		<Population>4380000</Population>
+	</ROW>
+
+	<ROW>
+		<name>Bosnia and Herzegovina</name>
+		<Population>3972000</Population>
+	</ROW>
+
+	<ROW>
+		<name>Ireland</name>
+		<Population>3775100</Population>
+	</ROW>
+
+	<ROW>
+		<name>Lithuania</name>
+		<Population>3698500</Population>
+	</ROW>
+
+	<ROW>
+		<name>Albania</name>
+		<Population>3401200</Population>
+	</ROW>
+
+	<ROW>
+		<name>Latvia</name>
+		<Population>2424200</Population>
+	</ROW>
+
+	<ROW>
+		<name>Macedonia</name>
+		<Population>2024000</Population>
+	</ROW>
+
+	<ROW>
+		<name>Slovenia</name>
+		<Population>1987800</Population>
+	</ROW>
+
+	<ROW>
+		<name>Estonia</name>
+		<Population>1439200</Population>
+	</ROW>
+
+	<ROW>
+		<name>Luxembourg</name>
+		<Population>435700</Population>
+	</ROW>
+
+	<ROW>
+		<name>Malta</name>
+		<Population>380200</Population>
+	</ROW>
+
+	<ROW>
+		<name>Iceland</name>
+		<Population>279000</Population>
+	</ROW>
+
+	<ROW>
+		<name>Andorra</name>
+		<Population>78000</Population>
+	</ROW>
+
+	<ROW>
+		<name>Faroe Islands</name>
+		<Population>43000</Population>
+	</ROW>
+
+	<ROW>
+		<name>Monaco</name>
+		<Population>34000</Population>
+	</ROW>
+
+	<ROW>
+		<name>Liechtenstein</name>
+		<Population>32300</Population>
+	</ROW>
+
+	<ROW>
+		<name>San Marino</name>
+		<Population>27000</Population>
+	</ROW>
+
+	<ROW>
+		<name>Gibraltar</name>
+		<Population>25000</Population>
+	</ROW>
+
+	<ROW>
+		<name>Svalbard and Jan Mayen</name>
+		<Population>3200</Population>
+	</ROW>
+
+	<ROW>
+		<name>Holy See (Vatican City State)</name>
+		<Population>1000</Population>
+	</ROW>
+</DATA>
