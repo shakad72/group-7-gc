@@ -1,0 +1,47 @@
+<DATA>
+
+	<ROW>
+		<Name>Germany</Name>
+		<Population>82164700</Population>
+	</ROW>
+
+	<ROW>
+		<Name>France</Name>
+		<Population>59225700</Population>
+	</ROW>
+
+	<ROW>
+		<Name>Netherlands</Name>
+		<Population>15864000</Population>
+	</ROW>
+
+	<ROW>
+		<Name>Belgium</Name>
+		<Population>10239000</Population>
+	</ROW>
+
+	<ROW>
+		<Name>Austria</Name>
+		<Population>8091800</Population>
+	</ROW>
+
+	<ROW>
+		<Name>Switzerland</Name>
+		<Population>7160400</Population>
+	</ROW>
+
+	<ROW>
+		<Name>Luxembourg</Name>
+		<Population>435700</Population>
+	</ROW>
+
+	<ROW>
+		<Name>Monaco</Name>
+		<Population>34000</Population>
+	</ROW>
+
+	<ROW>
+		<Name>Liechtenstein</Name>
+		<Population>32300</Population>
+	</ROW>
+</DATA>
