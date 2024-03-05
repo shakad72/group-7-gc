@@ -1,0 +1,21 @@
+@startuml
+
+actor User as "Clerical User"
+
+rectangle Database
+
+rectangle "Report Application" {
+    usecase UC as "Get report"
+
+    usecase Nav as "Menu Navigation"
+
+    usecase FLE as "XML menu/report
+    definition files"
+
+    User - UC
+    UC ..> Nav : report selection
+    Nav ..> FLE : references
+    UC - Database
+}
+
+@enduml

@@ -1,0 +1,3 @@
+- For all use cases, use the template at: https://github.com/edinburgh-napier/SET08803/blob/main/labs/lab03b/use-case.md
+- use case diagram example found in Lab03b
+- This file can be deleted prior to feature branch being merged with the development branch
