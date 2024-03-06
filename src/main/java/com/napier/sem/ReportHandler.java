@@ -39,7 +39,7 @@ public class ReportHandler {
      */
     public ReportHandler(String file) throws IOException{
         // Create a MenuItem which references the XML report definition file and pass to another constructor
-        this(new MenuItem(null,"report",file,null));
+        this(new MenuItem(null,"report",file,null), false);
     }
 
 
@@ -49,7 +49,7 @@ public class ReportHandler {
      * @param item reference to MenuItem object that has the path to the XML report definition file
      * @throws IOException Thrown when the file pointed to in the MenuItem object could not be found
      */
-    public ReportHandler(MenuItem item) throws IOException {
+    public ReportHandler(MenuItem item, boolean interactiveMode) throws IOException {
         // Instantiate a document builder factory
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder;
@@ -91,11 +91,13 @@ public class ReportHandler {
         String sqlWithParameters = insertParameters();
         // Display menu
         displayReport(sqlWithParameters);
-        // Wait on a keystroke before continuing
-        System.out.print("Please hit ENTER to continue...");
-        Scanner in = new Scanner(System.in);
-        in.nextLine();
-        System.out.println();
+        // Wait on a keystroke before continuing (if in interactive mode)
+        if(interactiveMode){
+            System.out.print("Please hit ENTER to continue...");
+            Scanner in = new Scanner(System.in);
+            in.nextLine();
+            System.out.println();
+        }
     }
 
 
