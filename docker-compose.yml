@@ -3,7 +3,7 @@ services:
   # Application Dockerfile is in same folder as this docker-compose.yml file
   app:
     build: .
-#    tty: true
+    tty: true
 
   # db Dockerfile is is db folder
   db:

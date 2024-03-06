@@ -1,7 +1,7 @@
 # Software Engineering Methods Coursework Assessment
 
 Group project for the development of Java software, for a fictitious organisation, that reports on population information. 
-The Scrum team is comprised of the following persons:
+The scrum team consists of the following persons:
 
 - Ahnaf Faiz
 - Kingsley Forbes
@@ -14,26 +14,34 @@ The Scrum team is comprised of the following persons:
 
 2 requirements of 32 have been implemented, which is 6.25%
 
-## How to Use
+## Running the Application in Non-Interactive Mode (default)
 
-1. Type "mvn package" to compile and build the project. The JAR file will be in the target subdirectory.
-2. Type "docker-compose up -d". This will build and execute the containers, in detached mode, using docker-compose.
-3. Type "docker-compose exec app java -jar app-0.1.0.1-jar-with-dependencies.jar". This will execute the Java application (in the app container) and permit the user to provide input and see the output.
-4. Type "docker-compose down" when you are ready to stop and remove the containers.
+1. Type "docker-compose up" to build and launch the "app" and "db" containers. You will see the output for report documented in use-case-1.md
+2. Hit Ctrl-C to return to the command prompt
+3. Type "docker-compose down" to stop and remove the containers (ie. to clean up)
+
+## Running the Application in Interactive Mode
+
+1. Uncomment the line in the application Dockerfile with the word "ENTRYPOINT"
+2. To avoid having to edit code to communicate with localhost, type "echo 127.0.0.1 db >> %WINDIR%\System32\Drivers\Etc\Hosts" so that db resolves to localhost
+3. Type "docker-compose up -d" to build and execute the containers in detached mode
+4. Type "docker-compose exec app java -jar app-0.1.0.5-jar-with-dependencies.jar" to execute the Java application within the app container
+5. Navigate to the report you would like to view using the menus
+6. Once you have exited the application, type "docker-compose down" to stop and remove the containers
 
 ## Development Tips
 
-- To run the MySQL docker image on your local PC during development, do the following:
+To run the MySQL docker image on your local PC during development, do the following:
 
-        1). Enter the "db" subdirectory.
-        2). To build the docker image type "docker build -t db ."
-        3). To create and run a container based on the image type "docker run  -d --rm -p 3306:3306 db".
-        4). At this point, you can use MySQL Workbench or DBeaver to connect to MySQL at localhost port 3306 using login "root" and password "group-7-gc".
-        5). If you plan on testing the application with the container you spawned in step 3 then temporarily set the DB_HOST variable in the App.java class to "localhost".
+1. Enter the "db" subdirectory
+2. To build the docker image type "docker build -t db ."
+3. To create and run a container based on the image type "docker run  -d --rm -p 3306:3306 db"
+4. At this point, you can use MySQL Workbench or DBeaver to connect to MySQL at localhost port 3306 using login "root" and password "group-7-gc"
+5. If you plan on testing the application with the container you spawned in step 3 then temporarily set the DB_HOST variable in the App.java class to "localhost"
 
 # Application Requirements
 
-Software requirements:
+Software Requirements:
 ----------------------
 
 - Software should permit non-interactive execution where user input is not required. This will be useful for automated testing
@@ -46,39 +54,62 @@ Software requirements:
 - If no results are returned, rather than a table, the output "No results found!" can be displayed to the user
 - The user should be returned to the top-level menu after the report is executed (regardless of whether of not results were found)
 
-### Interraction with the software can be as follows:
+### Screen Capture of Application Running in Interactive Mode:
 
-    Software Engineering Methods Report Application
-    -----------------------------------------------
+    C:\IdeaProjects\group-7-gc\target> java -jar .\app-0.1.0.4-jar-with-dependencies.jar
+    Attempting to connect to database (attempt 1 of 10)
+    Successfully connected
     
-    Reports are grouped into four categories.
-    Please proceed by selecting a category followed by a report.
-
-    1 - Country Report
-    2 - City Report
-    3 - Capital City Report
-    4 - Population Report
-    E - [Exit]
-
-    Please make a selection (1-4): 1
-
-    1 - Report 1
-    2 - Report 2
+    Main Menu
+    1 - Country Reports
+    2 - City Reports
+    3 - Capital City Reports
+    4 - Population Reports
+    E - Exit
+    Please make a selection (1...4 or E): 1
+    Country Reports
+    1 - All the countries in the world organised by largest population to smallest
+    2 - All the countries in a continent organised by largest population to smallest
+    P - Previous Menu
+    Please make a selection (1 or P): 1
+    All the countries in the world organised by largest population to smallest
+    +----+--------------------------------------------+-------------+-------------------------+----------+---------------------------------+
+    |Code|Name                                        |Continent    |Region                   |Population|Capital                          |
+    +----+--------------------------------------------+-------------+-------------------------+----------+---------------------------------+
+    |CHN |China                                       |Asia         |Eastern Asia             |1277558000|Peking                           |
+    |IND |India                                       |Asia         |Southern and Central Asia|1013662000|New Delhi                        |
+    |USA |United States                               |North America|North America            |278357000 |Washington                       |
+    |IDN |Indonesia                                   |Asia         |Southeast Asia           |212107000 |Jakarta                          |
+    |BRA |Brazil                                      |South America|South America            |170115000 |Brasília                         |
+    |PAK |Pakistan                                    |Asia         |Southern and Central Asia|156483000 |Islamabad                        |
+    |RUS |Russian Federation                          |Europe       |Eastern Europe           |146934000 |Moscow                           |
     .
     .
     .
-    7 - Report 7
-    P - [Previous menu]
-
-    Please make a selection (1-7 or B): 1
-    Please enter the continent or type M to return to the menu: South America
-
-    Sample report
-    +------------+-------------------+
-    | Country    | Population        |
-    +------------+-------------------+
-    | Country 1  | XXXXXX            |
-    | Country 2  | YYYYYY            |
-    +------------+-------------------+
+    |TKL |Tokelau                                     |Oceania      |Polynesia                |2000      |Fakaofo                          |
+    |VAT |Holy See (Vatican City State)               |Europe       |Southern Europe          |1000      |Città del Vaticano               |
+    |CCK |Cocos (Keeling) Islands                     |Oceania      |Australia and New Zealand|600       |West Island                      |
+    |PCN |Pitcairn                                    |Oceania      |Polynesia                |50        |Adamstown                        |
+    |ATA |Antarctica                                  |Antarctica   |Antarctica               |0         |                                 |
+    |ATF |French Southern territories                 |Antarctica   |Antarctica               |0         |                                 |
+    |BVT |Bouvet Island                               |Antarctica   |Antarctica               |0         |                                 |
+    |HMD |Heard Island and McDonald Islands           |Antarctica   |Antarctica               |0         |                                 |
+    |IOT |British Indian Ocean Territory              |Africa       |Eastern Africa           |0         |                                 |
+    |SGS |South Georgia and the South Sandwich Islands|Antarctica   |Antarctica               |0         |                                 |
+    |UMI |United States Minor Outlying Islands        |Oceania      |Micronesia/Caribbean     |0         |                                 |
+    +----+--------------------------------------------+-------------+-------------------------+----------+---------------------------------+
     
-    ----> User is returned to the top menu
+    Country Reports
+    1 - All the countries in the world organised by largest population to smallest
+    2 - All the countries in a continent organised by largest population to smallest
+    P - Previous Menu
+    Please make a selection (1 or P): p
+    Main Menu
+    1 - Country Reports
+    2 - City Reports
+    3 - Capital City Reports
+    4 - Population Reports
+    E - Exit
+    Please make a selection (1...4 or E): e
+    Bye!
+    C:\IdeaProjects\group-7-gc\target>
