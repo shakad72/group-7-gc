@@ -1,0 +1,9 @@
+<report title="The top N populated countries in a region">
+    <sql>SELECT Code, Name, Continent, Region, Population, (select Name from city where id=country.Capital) as Capital
+        FROM country WHERE region = "%region%" ORDER BY Population DESC LIMIT %n%
+    </sql>
+    <parameters>
+        <parameter name="region" prompt="Please enter the region eg. Caribbean"/>
+        <parameter name="n" prompt="Please enter the number of rows to return (N)"/>
+    </parameters>
+</report>

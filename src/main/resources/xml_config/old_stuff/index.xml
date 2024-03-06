@@ -1,0 +1,8 @@
+<menu title="Main Menu" prompt="Please make a selection (1...4 or E)">
+    <menuItem id="1" action="menu" file="menu_countryReports.xml">Country Reports</menuItem>
+    <menuItem id="2" action="menu" file="menu_cityReports.xml">City Reports</menuItem>
+    <menuItem id="3" action="menu" file="menu_capitalCityReports.xml">Capital City Reports</menuItem>
+    <menuItem id="4" action="menu" file="menu_populationReports.xml">Population Reports</menuItem>
+    <!-- "previous" action from the main menu also exits the application just like the "exit" action -->
+    <menuItem id="E" action="previous" >Exit</menuItem>
+</menu>

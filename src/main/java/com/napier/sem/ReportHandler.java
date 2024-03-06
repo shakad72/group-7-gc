@@ -14,6 +14,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 
 /**
@@ -33,7 +34,7 @@ public class ReportHandler {
     /**
      * Class constructor that will immediately display the report passed as an argument.
      *
-     * @param file XML report desinition file eg. xml_config/country_reports/report_countryReport1.xml
+     * @param file XML report desinition file eg. xml_config/country_reports/report1.xml
      * @throws IOException Thrown when the specified file could not be found
      */
     public ReportHandler(String file) throws IOException{
@@ -90,6 +91,11 @@ public class ReportHandler {
         String sqlWithParameters = insertParameters();
         // Display menu
         displayReport(sqlWithParameters);
+        // Wait on a keystroke before continuing
+        System.out.print("Please hit ENTER to continue...");
+        Scanner in = new Scanner(System.in);
+        in.nextLine();
+        System.out.println();
     }
 
 

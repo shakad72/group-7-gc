@@ -1,8 +1,35 @@
-<menu title="Main Menu" prompt="Please make a selection (1...4 or E)">
-    <menuItem id="1" action="menu" file="menu_countryReports.xml">Country Reports</menuItem>
-    <menuItem id="2" action="menu" file="menu_cityReports.xml">City Reports</menuItem>
-    <menuItem id="3" action="menu" file="menu_capitalCityReports.xml">Capital City Reports</menuItem>
-    <menuItem id="4" action="menu" file="menu_populationReports.xml">Population Reports</menuItem>
-    <!-- "previous" action from the main menu also exits the application just like the "exit" action -->
+<menu title="Main Menu" prompt="Please make a selection (1...32 or E)">
+    <menuItem id="1" action="report" file="reports/report1.xml">All the countries in the world organised by largest population to smallest</menuItem>
+    <menuItem id="2" action="report" file="reports/report2.xml">All the countries in a continent organised by largest population to smallest</menuItem>
+    <menuItem id="3" action="report" file="reports/report3.xml">All the countries in a region organised by largest population to smallest</menuItem>
+    <menuItem id="4" action="report" file="reports/report4.xml">The top N populated countries in the world where N is provided by the user</menuItem>
+    <menuItem id="5" action="report" file="reports/report5.xml">The top N populated countries in a continent where N is provided by the user</menuItem>
+    <menuItem id="6" action="report" file="reports/report6.xml">The top N populated countries in a region where N is provided by the user</menuItem>
+    <menuItem id="7" action="report" file="reports/report7.xml">All the cities in the world organised by largest population to smallest</menuItem>
+    <menuItem id="8" action="report" file="reports/report8.xml">All the cities in a continent organised by largest population to smallest</menuItem>
+    <menuItem id="9" action="report" file="reports/report9.xml">All the cities in a region organised by largest population to smallest</menuItem>
+    <menuItem id="10" action="report" file="reports/report10.xml">All the cities in a country organised by largest population to smallest</menuItem>
+    <menuItem id="11" action="report" file="reports/report11.xml">All the cities in a district organised by largest population to smallest</menuItem>
+    <menuItem id="12" action="report" file="reports/report12.xml">The top N populated cities in the world where N is provided by the user</menuItem>
+    <menuItem id="13" action="report" file="reports/report13.xml">The top N populated cities in a continent where N is provided by the user</menuItem>
+    <menuItem id="14" action="report" file="reports/report14.xml">The top N populated cities in a region where N is provided by the user</menuItem>
+    <menuItem id="15" action="report" file="reports/report15.xml">The top N populated cities in a country where N is provided by the user</menuItem>
+    <menuItem id="16" action="report" file="reports/report16.xml">The top N populated cities in a district where N is provided by the user</menuItem>
+    <menuItem id="17" action="report" file="reports/report17.xml">All the capital cities in the world organised by largest population to smallest</menuItem>
+    <menuItem id="18" action="report" file="reports/report18.xml">All the capital cities in a continent organised by largest population to smallest</menuItem>
+    <menuItem id="19" action="report" file="reports/report19.xml">All the capital cities in a region organised by largest to smallest</menuItem>
+    <menuItem id="20" action="report" file="reports/report20.xml">The top N populated capital cities in the world where N is provided by the user</menuItem>
+    <menuItem id="21" action="report" file="reports/report21.xml">The top N populated capital cities in a continent where N is provided by the user</menuItem>
+    <menuItem id="22" action="report" file="reports/report22.xml">The top N populated capital cities in a region where N is provided by the user</menuItem>
+    <menuItem id="23" action="report" file="reports/report23.xml">The population of people, people living in cities, and people not living in cities in each continent</menuItem>
+    <menuItem id="24" action="report" file="reports/report24.xml">The population of people, people living in cities, and people not living in cities in each region</menuItem>
+    <menuItem id="25" action="report" file="reports/report25.xml">The population of people, people living in cities, and people not living in cities in each country</menuItem>
+    <menuItem id="26" action="report" file="reports/report26.xml">The population of the world</menuItem>
+    <menuItem id="27" action="report" file="reports/report27.xml">The population of a continent</menuItem>
+    <menuItem id="28" action="report" file="reports/report28.xml">The population of a region</menuItem>
+    <menuItem id="29" action="report" file="reports/report29.xml">The population of a country</menuItem>
+    <menuItem id="30" action="report" file="reports/report30.xml">The population of a district</menuItem>
+    <menuItem id="31" action="report" file="reports/report31.xml">The population of a city</menuItem>
+    <menuItem id="32" action="report" file="reports/report32.xml">The number of people who speak Chinese, English, Hindi, Spanish, Arabic</menuItem>
     <menuItem id="E" action="previous" >Exit</menuItem>
 </menu>
