@@ -1,0 +1,10 @@
+<report title="Top (N) populated capital cities in the world">
+    <sql>
+        select city.Name, country.Name as Country, city.Population  from city inner join country  on country.Capital = city.ID
+        order by city.Population desc
+        limit %n%
+    </sql>
+    <parameters>
+        <parameter name="n" prompt="Please enter the number of rows to return (N)"/>
+    </parameters>
+</report>
