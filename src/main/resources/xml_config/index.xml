@@ -30,6 +30,6 @@
     <menuItem id="29" action="report" file="reports/report29.xml">The population of a country</menuItem>
     <menuItem id="30" action="report" file="reports/report30.xml">The population of a district</menuItem>
     <menuItem id="31" action="report" file="reports/report31.xml">The population of a city</menuItem>
-    <menuItem id="32" action="report" file="reports/report32.xml">The number of people who speak Chinese, English, Hindi, Spanish, Arabic</menuItem>
+    <menuItem id="32" action="report" file="reports/report32.xml">The number of people who speak Chinese, English, Hindi, Spanish, and Arabic</menuItem>
     <menuItem id="E" action="previous" >Exit</menuItem>
 </menu>
