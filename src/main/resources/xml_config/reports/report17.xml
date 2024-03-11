@@ -1,0 +1,7 @@
+<report title="Sorted list of all capital cities in the world, organized by population from largest to smallest">
+    <sql>
+        select city.Name, country.Name as Country, city.District , city.Population  from city inner join country  on city.CountryCode = country.Code
+        and country.Capital = city.ID
+        order by city.Population desc
+    </sql>
+</report>
