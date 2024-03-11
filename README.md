@@ -12,7 +12,7 @@ The scrum team consists of the following persons:
 
 ### Requirements Implemented
 
-18 requirements of 32 have been implemented, which is 56.25%
+22 requirements of 32 have been implemented, which is 68.75%
 
 ## Running the Application in Non-Interactive Mode (default)
 
