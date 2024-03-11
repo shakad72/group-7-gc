@@ -1,8 +1,8 @@
 <report title="All cities in a specific region, organized by population from largest to smallest">
     <sql>
-        select city.Name, country.Name, city.District , city.Population  from city inner join country  on city.CountryCode = country.Code
+        select city.Name, country.Name as Country, city.District , city.Population  from city inner join country  on city.CountryCode = country.Code
         where country.Region  ='%region%'
-        order by city.Population desc;
+        order by city.Population desc
     </sql>
     <parameters>
         <parameter name="region" prompt="Please enter a region eg. Caribbean"/>
