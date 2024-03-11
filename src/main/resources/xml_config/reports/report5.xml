@@ -1,0 +1,12 @@
+<report title="Top N populated countries in a specific continent">
+    <sql>
+        select country.Code , country.Name, country.Continent, country.Region, country.Population, city.Name as Capital
+        from country inner join city on country.Capital  = city.ID
+        where country.Continent = '%continent%'
+        order by country.Population desc limit %n%
+    </sql>
+    <parameters>
+        <parameter name="continent" prompt="Please enter the continent eg. South America"/>
+        <parameter name="n" prompt="Please enter the number of rows to return (N)"/>
+    </parameters>
+</report>
