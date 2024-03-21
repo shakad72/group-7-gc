@@ -1,5 +1,18 @@
 # Software Engineering Methods Coursework Assessment
 
+Build status for master:
+
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/shakad72/group-7-gc/main.yml?branch=master)
+
+Build status for develop:
+
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/shakad72/group-7-gc/main.yml?branch=develop)
+
+License:
+
+![GitHub License](https://img.shields.io/github/license/shakad72/group-7-gc)
+
+
 Group project for the development of Java software, for a fictitious organisation, that reports on population information. 
 The scrum team consists of the following persons:
 
