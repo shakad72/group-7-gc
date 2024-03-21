@@ -1,22 +1,16 @@
 # Software Engineering Methods Coursework Assessment
 
-Current release: ![GitHub Release](https://img.shields.io/github/v/release/shakad72/group-7-gc)
-
-License:
+![GitHub Release](https://img.shields.io/github/v/release/shakad72/group-7-gc)
 
 ![GitHub License](https://img.shields.io/github/license/shakad72/group-7-gc)
 
-Build status for master branch:
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/shakad72/group-7-gc/main.yml?branch=master&label=master%20build)
 
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/shakad72/group-7-gc/main.yml?branch=master)
 
-Build status for develop branch:
-
-![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/shakad72/group-7-gc/main.yml?branch=develop)
-
-Code coverage for master branch:
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/shakad72/group-7-gc/main.yml?branch=develop&label=develop%20build)
 
 TODO: Include codecov code coverage badge for master branch
+
 
 
 Group project for the development of Java software, for a fictitious organisation, that reports on population information. 
