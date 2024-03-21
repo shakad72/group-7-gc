@@ -1,8 +1,6 @@
 # Software Engineering Methods Coursework Assessment
 
-Current release:
-
-![GitHub Release](https://img.shields.io/github/v/release/shakad72/group-7-gc)
+Current release: ![GitHub Release](https://img.shields.io/github/v/release/shakad72/group-7-gc)
 
 License:
 
