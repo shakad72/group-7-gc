@@ -1,0 +1,13 @@
+<report title="All the countries in the world organised by largest population to smallest">
+    <sql>
+        select c.Name as Country , c.Population as TotalPopulation , (select sum(population) from city where countryCode=c.Code) UrbanPopulation,
+        round(((select sum(population) from city where countryCode=c.Code)/c.Population)*100,1) as `UrbanPopulation%`,
+        (c.Population - (select sum(population) from city where countryCode=c.Code)) as RuralPopulation,
+        round(((c.Population - (select sum(population) from city where countryCode=c.Code))/c.Population)*100,1) as `RuralPopulation%`
+        from country c inner join city cty on c.Capital =cty.ID
+        where c.Name='%country%'
+    </sql>
+    <parameters>
+        <parameter name="country" prompt="Please enter a country eg. Belgium"/>
+    </parameters>
+</report>

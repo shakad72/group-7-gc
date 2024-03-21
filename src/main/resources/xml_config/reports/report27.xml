@@ -1,0 +1,13 @@
+<report title="Population of a continent">
+    <sql>
+        select Continent as Continent , sum(Population) as TotalPopulation,
+        (select sum(city.Population) from city inner join country on city.CountryCode = country.Code where country.Continent=c.Continent) as UrbanPopulation,
+        round((select sum(city.Population) from city inner join country on city.CountryCode = country.Code where country.Continent=c.Continent)/sum(Population)*100,2) as `UrbanPopulation%`,
+        (sum(c.Population) - (select sum(city.Population) from city inner join country on city.CountryCode = country.Code where country.Continent=c.Continent)) as RuralPopulation,
+        round((select(sum(c.Population) - (select sum(city.Population) from city inner join country on city.CountryCode = country.Code where country.Continent=c.Continent))/sum(Population)*100),2) as `RuralPopulation%`
+        from country c where c.Continent  = '%continent%'
+    </sql>
+    <parameters>
+        <parameter name="continent" prompt="Please enter a continent eg. Africa"/>
+    </parameters>
+</report>

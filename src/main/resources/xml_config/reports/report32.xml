@@ -1,0 +1,12 @@
+<report title="The number of people who speak Chinese, English, Hindi, Spanish, and Arabic">
+    <sql>
+        select cl.`Language`, round(sum(c.Population*(cl.Percentage/100))) as Population,
+        round((sum(c.Population*(cl.Percentage/100)))/(select sum(population) from country c )*100,2) as Percentage
+        from countrylanguage cl inner join
+        country c on cl.CountryCode =c.Code
+        where cl.`Language` in ('Chinese','English','Hindi','Spanish','Arabic')
+        and cl.Percentage >0
+        group by cl.`Language`
+        order by Population desc
+    </sql>
+</report>

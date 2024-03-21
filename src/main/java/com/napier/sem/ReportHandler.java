@@ -14,6 +14,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 
 /**
@@ -33,12 +34,12 @@ public class ReportHandler {
     /**
      * Class constructor that will immediately display the report passed as an argument.
      *
-     * @param file XML report desinition file eg. xml_config/country_reports/report_countryReport1.xml
+     * @param file XML report desinition file eg. xml_config/country_reports/report1.xml
      * @throws IOException Thrown when the specified file could not be found
      */
     public ReportHandler(String file) throws IOException{
         // Create a MenuItem which references the XML report definition file and pass to another constructor
-        this(new MenuItem(null,"report",file,null));
+        this(new MenuItem(null,"report",file,null), false);
     }
 
 
@@ -48,7 +49,7 @@ public class ReportHandler {
      * @param item reference to MenuItem object that has the path to the XML report definition file
      * @throws IOException Thrown when the file pointed to in the MenuItem object could not be found
      */
-    public ReportHandler(MenuItem item) throws IOException {
+    public ReportHandler(MenuItem item, boolean interactiveMode) throws IOException {
         // Instantiate a document builder factory
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder;
@@ -90,6 +91,13 @@ public class ReportHandler {
         String sqlWithParameters = insertParameters();
         // Display menu
         displayReport(sqlWithParameters);
+        // Wait on a keystroke before continuing (if in interactive mode)
+        if(interactiveMode){
+            System.out.print("Please hit ENTER to continue...");
+            Scanner in = new Scanner(System.in);
+            in.nextLine();
+            System.out.println();
+        }
     }
 
 

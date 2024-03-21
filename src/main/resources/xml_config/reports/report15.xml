@@ -1,0 +1,13 @@
+<report title="Top (N) populated cities in a specific country">
+    <sql>
+        select city.Name, country.Name as Country, city.District , city.Population  from city inner join country  on city.CountryCode = country.Code
+        where country.Name = '%country%'
+        order by city.Population desc
+        limit %n%
+
+    </sql>
+    <parameters>
+        <parameter name="country" prompt="Please enter a country eg. Brazil"/>
+        <parameter name="n" prompt="Please enter the number of rows to return (N)"/>
+    </parameters>
+</report>

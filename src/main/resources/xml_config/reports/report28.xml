@@ -1,0 +1,13 @@
+<report title="Population of a region">
+    <sql>
+        select Region as Region , sum(Population) as TotalPopulation,
+        (select sum(city.Population) from city inner join country on city.CountryCode = country.Code where country.Region=c.Region) as UrbanPopulation,
+        round((select sum(city.Population) from city inner join country on city.CountryCode = country.Code where country.Region=c.Region)/sum(Population)*100,2) as `UrbanPopulation%`,
+        (sum(c.Population) - (select sum(city.Population) from city inner join country on city.CountryCode = country.Code where country.Region=c.Region)) as RuralPopulation,
+        round((select(sum(c.Population) - (select sum(city.Population) from city inner join country on city.CountryCode = country.Code where country.Region=c.Region))/sum(Population)*100),2) as `RuralPopulation%`
+        from country c where c.Region  = '%region%'
+    </sql>
+    <parameters>
+        <parameter name="region" prompt="Please enter a region eg. Melanesia"/>
+    </parameters>
+</report>
