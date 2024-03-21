@@ -155,7 +155,7 @@ public class MenuHandler {
     private void handleReport(MenuItem item){
         // Attempt to display the report by instantiating a new ReportHandler object
         try {
-            new ReportHandler(item);
+            new ReportHandler(item, false);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

@@ -1,5 +1,0 @@
-<menu title="Country Reports" prompt="Please make a selection (1 or P)">
-    <menuItem id="1" action="report" file="country_reports/report_countryReport1.xml">All the countries in the world organised by largest population to smallest</menuItem>
-    <menuItem id="2" action="report" file="country_reports/report_countryReport2.xml">All the countries in a continent organised by largest population to smallest</menuItem>
-    <menuItem id="P" action="previous" >Previous Menu</menuItem>
-</menu>

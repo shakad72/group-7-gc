@@ -1,0 +1,6 @@
+<report title="All the countries in a continent organised by largest population to smallest">
+    <sql>select Code, Name, Continent, Region, Population, (select Name from city where ID=country.Capital) as Capital from country where Continent="%continent%" order by Population desc</sql>
+    <parameters>
+        <parameter name="continent" prompt="Please enter a continent eg. Europe"/>
+    </parameters>
+</report>

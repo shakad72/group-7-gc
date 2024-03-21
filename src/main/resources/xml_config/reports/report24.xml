@@ -1,0 +1,10 @@
+<report title="Population of people living in cities, and not living in cities, on each region">
+    <sql>
+        select Region , sum(Population) as TotalPopulation,
+        (select sum(city.Population) from city inner join country on city.CountryCode = country.Code where country.Region=c.Region) as UrbanPopulation,
+        round((select sum(city.Population) from city inner join country on city.CountryCode = country.Code where country.Region=c.Region)/sum(Population)*100,2) as `UrbanPopulation%`,
+        (sum(c.Population) - (select sum(city.Population) from city inner join country on city.CountryCode = country.Code where country.Region=c.Region)) as RuralPopulation,
+        round((select(sum(c.Population) - (select sum(city.Population) from city inner join country on city.CountryCode = country.Code where country.Region=c.Region))/sum(Population)*100),2) as `RuralPopulation%`
+        from country c group by Region
+    </sql>
+</report>
