@@ -15,9 +15,13 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
+      - name: Run docker DB container
+        run: |
+          cd db
+          docker build . -t db
+          docker run -p 3306:3306 db
       - name: Unit Tests
         run: mvn -Dtest=com.napier.sem.AppTest test
-      - name: Package then run Docker Compose
-        run: |
-          mvn package -DskipTests
-          docker-compose up --abort-on-container-exit
+      - name: Package code
+        run: mvn package -DskipTests
+#          docker-compose up --abort-on-container-exit
