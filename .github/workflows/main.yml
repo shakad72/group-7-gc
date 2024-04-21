@@ -18,11 +18,19 @@ jobs:
       - name: Integration Tests
         run: |
           docker build -t db ./db
-          docker run --name worldDb --hostname db -dp 3306:3306 db
+          docker run --name db --hostname db -dp 3306:3306 db
           mvn -Dtest=com.napier.sem.IntegrationTests test
-          docker stop worldDb
-          docker rm worldDb
+          docker stop db
+          docker rm db
           docker image rm db
+      - name: CodeCov
+        uses: codecov/codecov-action@v4.0.1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }} # now required for public repos too
+          directory: ./target/site/jacoco
+          flags: Integration Tests # optional
+          verbose: true # optional (default = false)
+          slug: shakad72/group-7-gc
 
   build:
     name: Execute sample report

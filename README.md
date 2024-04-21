@@ -9,7 +9,8 @@
 
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/shakad72/group-7-gc/main.yml?branch=develop&label=develop%20build)
 
-TODO: Include codecov code coverage badge for master branch
+![Codecov (with branch)](https://img.shields.io/codecov/c/github/shakad72/group-7-gc/master)
+
 
 
 
