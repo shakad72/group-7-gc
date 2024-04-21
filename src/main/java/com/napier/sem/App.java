@@ -14,7 +14,7 @@ public class App
     public static Connection con = null;
 
     // Host where world database is located
-    private static final String DB_HOST = "db";  // Change to db when deploying using docker compose
+    private static final String DB_HOST = "localhost";  // Change to db when deploying using docker compose
 
     // Port to connect to MySQL database
     private static final int DB_PORT = 3306;
