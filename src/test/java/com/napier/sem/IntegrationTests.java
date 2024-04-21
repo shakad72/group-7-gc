@@ -5,12 +5,9 @@ import org.junit.jupiter.api.Test;
 
 public class IntegrationTests {
 
-    static App app;
-
     @BeforeAll
     static void init()
     {
-//        app = new App();
     }
 
     @Test
