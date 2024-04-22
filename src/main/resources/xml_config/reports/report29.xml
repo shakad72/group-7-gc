@@ -1,4 +1,4 @@
-<report title="All the countries in the world organised by largest population to smallest">
+<report title="Population of a country">
     <sql>
         select c.Name as Country , c.Population as TotalPopulation , (select sum(population) from city where countryCode=c.Code) UrbanPopulation,
         round(((select sum(population) from city where countryCode=c.Code)/c.Population)*100,1) as `UrbanPopulation%`,

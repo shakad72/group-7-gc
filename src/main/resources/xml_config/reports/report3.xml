@@ -4,6 +4,6 @@
         where country.Region ='%region%'
     </sql>
     <parameters>
-        <parameter name="region" prompt="Please enter a region eg. Europe"/>
+        <parameter name="region" prompt="Please enter a region eg. Caribbean"/>
     </parameters>
 </report>

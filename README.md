@@ -29,15 +29,46 @@ The scrum team consists of the following persons:
 
 ### Evidence of Requirements Implemented
 
-|ID|Name|Met| Screenshot                                     |
-|----|----|----|------------------------------------------------|
-|1|All the countries in the world organised by largest population to smallest|Yes| ![Report1 Screenshot](screenshots/report1.png) |
+| ID | Name                                                                                                 | Met | Screenshot                                      |
+|----|------------------------------------------------------------------------------------------------------|-----|-------------------------------------------------|
+| 1  | All the countries in the world organised by largest population to smallest                           | Yes | ![Report1 Screenshot](screenshots/report1.png)  |
+| 2  | All the countries in a continent organised by largest population to smallest                         | Yes | ![Report1 Screenshot](screenshots/report2.png)  |
+| 3  | All the countries in a region organised by largest population to smallest                            | Yes | ![Report1 Screenshot](screenshots/report3.png)  |
+| 4  | The top N populated countries in the world where N is provided by the user                           | Yes | ![Report1 Screenshot](screenshots/report4.png)  |
+| 5  | The top N populated countries in a continent where N is provided by the user                         | Yes | ![Report1 Screenshot](screenshots/report5.png)  |
+| 6  | The top N populated countries in a region where N is provided by the user                            | Yes | ![Report1 Screenshot](screenshots/report6.png)  |
+| 7  | All the cities in the world organised by largest population to smallest                              | Yes | ![Report1 Screenshot](screenshots/report7.png)  |
+| 8  | All the cities in a continent organised by largest population to smallest                            | Yes | ![Report1 Screenshot](screenshots/report8.png)  |
+| 9  | All the cities in a region organised by largest population to smallest                               | Yes | ![Report1 Screenshot](screenshots/report9.png)  |
+| 10 | All the cities in a country organised by largest population to smallest                              | Yes | ![Report1 Screenshot](screenshots/report10.png) |
+| 11 | All the cities in a district organised by largest population to smallest                             | Yes | ![Report1 Screenshot](screenshots/report11.png) |
+| 12 | The top N populated cities in the world where N is provided by the user                              | Yes | ![Report1 Screenshot](screenshots/report12.png) |
+| 13 | The top N populated cities in a continent where N is provided by the user                            | Yes | ![Report1 Screenshot](screenshots/report13.png) |
+| 14 | The top N populated cities in a region where N is provided by the user                               | Yes | ![Report1 Screenshot](screenshots/report14.png) |
+| 15 | The top N populated cities in a country where N is provided by the user                              | Yes | ![Report1 Screenshot](screenshots/report15.png) |
+| 16 | The top N populated cities in a district where N is provided by the user                             | Yes | ![Report1 Screenshot](screenshots/report16.png) |
+| 17 | All the capital cities in the world organised by largest population to smallest                      | Yes | ![Report1 Screenshot](screenshots/report17.png) |
+| 18 | All the capital cities in a continent organised by largest population to smallest                    | Yes | ![Report1 Screenshot](screenshots/report18.png) |
+| 19 | All the capital cities in a region organised by largest to smallest                                  | Yes | ![Report1 Screenshot](screenshots/report19.png) |
+| 20 | The top N populated capital cities in the world where N is provided by the user                      | Yes | ![Report1 Screenshot](screenshots/report20.png) |
+| 21 | The top N populated capital cities in a continent where N is provided by the user                    | Yes | ![Report1 Screenshot](screenshots/report21.png) |
+| 22 | The top N populated capital cities in a region where N is provided by the user                       | Yes | ![Report1 Screenshot](screenshots/report22.png) |
+| 23 | The population of people, people living in cities, and people not living in cities in each continent | Yes | ![Report1 Screenshot](screenshots/report23.png) |
+| 24 | The population of people, people living in cities, and people not living in cities in each region    | Yes | ![Report1 Screenshot](screenshots/report24.png) |
+| 25 | The population of people, people living in cities, and people not living in cities in each country   | Yes | ![Report1 Screenshot](screenshots/report25.png) |
+| 26 | The population of the world                                                                          | Yes | ![Report1 Screenshot](screenshots/report26.png) |
+| 27 | The population of a continent                                                                        | Yes | ![Report1 Screenshot](screenshots/report27.png) |
+| 28 | The population of a region                                                                           | Yes | ![Report1 Screenshot](screenshots/report28.png) |
+| 29 | The population of a country                                                                          | Yes | ![Report1 Screenshot](screenshots/report29.png) |
+| 30 | The population of a district                                                                         | Yes | ![Report1 Screenshot](screenshots/report30.png) |
+| 31 | The population of a city                                                                             | Yes | ![Report1 Screenshot](screenshots/report31.png) |
+| 32 | number of people who speak Chinese, English, Hindi, Spanish, and Arabic                              | Yes | ![Report1 Screenshot](screenshots/report32.png) |
 
 ## Running the Application in Non-Interactive Mode (default)
 
 1. Type "docker-compose up" to build and launch the "app" and "db" containers. You will see the output for report documented in use-case-1.md
 2. Hit Ctrl-C to return to the command prompt
-3. Type "docker-compose down" to stop and remove the containers (ie. to clean up)
+3. Type "docker-compose down" to stop and remove the containers (i.e. to clean up)
 
 ## Running the Application in Interactive Mode
 
@@ -67,7 +98,7 @@ Software Requirements:
 - Software should permit interactive execution where users can navigate through a hierarchy of menus to select the report they want to view
 - Upon successful DB connection, user should be presented with a top-level menu (report groups)
 - After making a top-level menu selection (or entering E to exit), the user should be presented with a list of reports for the group selected
-- Once a report is selected, the user should be prompted for the required criteria (eg. country) or P to return to the top-level menu
+- Once a report is selected, the user should be prompted for the required criteria (e.g. country) or P to return to the top-level menu
 - Validation of the required input should be performed before the report is executed
 - The report can be presented as a table with columns sized by scanning through the field names and all results returned
 - If no results are returned, rather than a table, the output "No results found!" can be displayed to the user
@@ -75,60 +106,62 @@ Software Requirements:
 
 ### Screen Capture of Application Running in Interactive Mode:
 
-    C:\IdeaProjects\group-7-gc\target> java -jar .\app-0.1.0.4-jar-with-dependencies.jar
+    C:\Users\shaka\IdeaProjects\group-7-gc\target>java -jar app-jar-with-dependencies.jar -host localhost
     Attempting to connect to database (attempt 1 of 10)
     Successfully connected
     
     Main Menu
-    1 - Country Reports
-    2 - City Reports
-    3 - Capital City Reports
-    4 - Population Reports
-    E - Exit
-    Please make a selection (1...4 or E): 1
-    Country Reports
     1 - All the countries in the world organised by largest population to smallest
     2 - All the countries in a continent organised by largest population to smallest
-    P - Previous Menu
-    Please make a selection (1 or P): 1
-    All the countries in the world organised by largest population to smallest
-    +----+--------------------------------------------+-------------+-------------------------+----------+---------------------------------+
-    |Code|Name                                        |Continent    |Region                   |Population|Capital                          |
-    +----+--------------------------------------------+-------------+-------------------------+----------+---------------------------------+
-    |CHN |China                                       |Asia         |Eastern Asia             |1277558000|Peking                           |
-    |IND |India                                       |Asia         |Southern and Central Asia|1013662000|New Delhi                        |
-    |USA |United States                               |North America|North America            |278357000 |Washington                       |
-    |IDN |Indonesia                                   |Asia         |Southeast Asia           |212107000 |Jakarta                          |
-    |BRA |Brazil                                      |South America|South America            |170115000 |Brasília                         |
-    |PAK |Pakistan                                    |Asia         |Southern and Central Asia|156483000 |Islamabad                        |
-    |RUS |Russian Federation                          |Europe       |Eastern Europe           |146934000 |Moscow                           |
-    .
-    .
-    .
-    |TKL |Tokelau                                     |Oceania      |Polynesia                |2000      |Fakaofo                          |
-    |VAT |Holy See (Vatican City State)               |Europe       |Southern Europe          |1000      |Città del Vaticano               |
-    |CCK |Cocos (Keeling) Islands                     |Oceania      |Australia and New Zealand|600       |West Island                      |
-    |PCN |Pitcairn                                    |Oceania      |Polynesia                |50        |Adamstown                        |
-    |ATA |Antarctica                                  |Antarctica   |Antarctica               |0         |                                 |
-    |ATF |French Southern territories                 |Antarctica   |Antarctica               |0         |                                 |
-    |BVT |Bouvet Island                               |Antarctica   |Antarctica               |0         |                                 |
-    |HMD |Heard Island and McDonald Islands           |Antarctica   |Antarctica               |0         |                                 |
-    |IOT |British Indian Ocean Territory              |Africa       |Eastern Africa           |0         |                                 |
-    |SGS |South Georgia and the South Sandwich Islands|Antarctica   |Antarctica               |0         |                                 |
-    |UMI |United States Minor Outlying Islands        |Oceania      |Micronesia/Caribbean     |0         |                                 |
-    +----+--------------------------------------------+-------------+-------------------------+----------+---------------------------------+
-    
-    Country Reports
-    1 - All the countries in the world organised by largest population to smallest
-    2 - All the countries in a continent organised by largest population to smallest
-    P - Previous Menu
-    Please make a selection (1 or P): p
-    Main Menu
-    1 - Country Reports
-    2 - City Reports
-    3 - Capital City Reports
-    4 - Population Reports
+    3 - All the countries in a region organised by largest population to smallest
+    4 - The top N populated countries in the world where N is provided by the user
+    5 - The top N populated countries in a continent where N is provided by the user
+    6 - The top N populated countries in a region where N is provided by the user
+    7 - All the cities in the world organised by largest population to smallest
+    8 - All the cities in a continent organised by largest population to smallest
+    9 - All the cities in a region organised by largest population to smallest
+    10 - All the cities in a country organised by largest population to smallest
+    11 - All the cities in a district organised by largest population to smallest
+    12 - The top N populated cities in the world where N is provided by the user
+    13 - The top N populated cities in a continent where N is provided by the user
+    14 - The top N populated cities in a region where N is provided by the user
+    15 - The top N populated cities in a country where N is provided by the user
+    16 - The top N populated cities in a district where N is provided by the user
+    17 - All the capital cities in the world organised by largest population to smallest
+    18 - All the capital cities in a continent organised by largest population to smallest
+    19 - All the capital cities in a region organised by largest to smallest
+    20 - The top N populated capital cities in the world where N is provided by the user
+    21 - The top N populated capital cities in a continent where N is provided by the user
+    22 - The top N populated capital cities in a region where N is provided by the user
+    23 - The population of people, people living in cities, and people not living in cities in each continent
+    24 - The population of people, people living in cities, and people not living in cities in each region
+    25 - The population of people, people living in cities, and people not living in cities in each country
+    26 - The population of the world
+    27 - The population of a continent
+    28 - The population of a region
+    29 - The population of a country
+    30 - The population of a district
+    31 - The population of a city
+    32 - The number of people who speak Chinese, English, Hindi, Spanish, and Arabic
     E - Exit
-    Please make a selection (1...4 or E): e
-    Bye!
-    C:\IdeaProjects\group-7-gc\target>
+    Please make a selection (1...32 or E): 2
+    Please enter a continent eg. Europe: South America
+    All the countries in a continent organised by largest population to smallest
+    +----+----------------+-------------+-------------+----------+-----------------+
+    |Code|Name            |Continent    |Region       |Population|Capital          |
+    +----+----------------+-------------+-------------+----------+-----------------+
+    |BRA |Brazil          |South America|South America|170115000 |Brasília         |
+    |COL |Colombia        |South America|South America|42321000  |Santafé de Bogotá|
+    |ARG |Argentina       |South America|South America|37032000  |Buenos Aires     |
+    |PER |Peru            |South America|South America|25662000  |Lima             |
+    |VEN |Venezuela       |South America|South America|24170000  |Caracas          |
+    |CHL |Chile           |South America|South America|15211000  |Santiago de Chile|
+    |ECU |Ecuador         |South America|South America|12646000  |Quito            |
+    |BOL |Bolivia         |South America|South America|8329000   |La Paz           |
+    |PRY |Paraguay        |South America|South America|5496000   |Asunción         |
+    |URY |Uruguay         |South America|South America|3337000   |Montevideo       |
+    |GUY |Guyana          |South America|South America|861000    |Georgetown       |
+    |SUR |Suriname        |South America|South America|417000    |Paramaribo       |
+    |GUF |French Guiana   |South America|South America|181000    |Cayenne          |
+    |FLK |Falkland Islands|South America|South America|2000      |Stanley          |
+    +----+----------------+-------------+-------------+----------+-----------------+

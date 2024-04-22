@@ -1,6 +1,12 @@
-<report title="All the countries in a continent organised by largest population to smallest">
+<report title="Population of a district">
     <sql>
-        select sum(population) as Population from city where District ='%district%'
+        select District as District , sum(Population) as TotalPopulation , sum(Population) as UrbanPopulation,
+        '100%' as `UrbanPopulation%`,
+        '0' as RuralPopulation,
+        '0%' as `RuralPopulation%`
+        from city
+        where District='%district%'
+        group by district
     </sql>
     <parameters>
         <parameter name="district" prompt="Please enter a district eg. Limburg"/>
