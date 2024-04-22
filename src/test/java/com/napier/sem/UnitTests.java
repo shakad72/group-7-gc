@@ -10,6 +10,8 @@ public class UnitTests {
     @BeforeAll
     static void init()
     {
+        // Connect to localhost for unit tests
+        App.DB_HOST="localhost";
         App.connect();
     }
 
