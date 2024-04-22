@@ -18,7 +18,7 @@ public class IntegrationTests {
 
     @Test
     void completeTest(){
-        String[] args= {"-host","localhost","-port","3306","-reportDefinition","reports/report1.xml"};
+        String[] args= {"-host","localhost","-port","3306","-reportDefinition","reports/report2.xml","-reportParameter","South America"};
         App.main(args);
     }
 }
