@@ -3,7 +3,7 @@ on: push
 
 jobs:
   IntegrationTests:
-    name: Integration Tests
+    name: Unit and Integration Tests
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
@@ -15,15 +15,20 @@ jobs:
         with:
           java-version: '11'
           distribution: 'adopt'
-      - name: Integration Tests
+      - name: Run database docker container
         run: |
           docker build -t db ./db
           docker run --name worldDb --hostname db -dp 3306:3306 db
-          mvn -Dtest=com.napier.sem.IntegrationTests test
+      - name: Unit tests
+        run: mvn -Dtest=com.napier.sem.UnitTests test
+      - name: Integration tests
+        run: mvn -Dtest=com.napier.sem.IntegrationTests test
+      - name: Stop database docker container
+        run: |
           docker stop worldDb
           docker rm worldDb
           docker image rm db
-      - name: CodeCov
+      - name: Update CodeCov reports
         uses: codecov/codecov-action@v4.0.1
         with:
           token: ${{ secrets.CODECOV_TOKEN }} # now required for public repos too
