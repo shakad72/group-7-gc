@@ -30,6 +30,8 @@ public class App
     // Number of times application will attempt to connect to MySQL (will wait 30 seconds between attempts)
     private static final int DB_CONNECTION_ATTEMPTS = 10;
 
+    public static CommandLine cmdLine;
+
 
     /**
      * Application execution starts here.
@@ -49,7 +51,7 @@ public class App
         // Instantiate command line parser
         DefaultParser parser = new DefaultParser();
         // Declare CommandLine variable
-        CommandLine cmdLine;
+//        CommandLine cmdLine;
         // Attempt to parse command line arguments
         try {
             cmdLine = parser.parse(options, args);
