@@ -18,7 +18,7 @@ import java.util.Scanner;
 
 
 /**
- * Class that will read an XML report definition file, ask for required input, execute the SQL query, then display results.
+ * Class that will read an XML report definition file, ask for input, execute the SQL query, then display results.
  * Will adjust the column widths to the widest value for each column (including the heading).
  */
 public class ReportHandler {
@@ -34,7 +34,7 @@ public class ReportHandler {
     /**
      * Class constructor that will immediately display the report passed as an argument.
      *
-     * @param file XML report desinition file eg. xml_config/country_reports/report1.xml
+     * @param file XML report definition file eg. xml_config/country_reports/report1.xml
      * @throws IOException Thrown when the specified file could not be found
      */
     public ReportHandler(String file) throws IOException{

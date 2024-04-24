@@ -29,6 +29,7 @@ public class App
     // Number of times application will attempt to connect to MySQL (will wait 30 seconds between attempts)
     private static final int DB_CONNECTION_ATTEMPTS = 10;
 
+    // Variable that will hold command line arguments
     public static CommandLine cmdLine;
 
 
@@ -49,8 +50,6 @@ public class App
                 .addOption("reportParameter",true,"Input parameter for selected report (if required)");
         // Instantiate command line parser
         DefaultParser parser = new DefaultParser();
-        // Declare CommandLine variable
-//        CommandLine cmdLine;
         // Attempt to parse command line arguments
         try {
             cmdLine = parser.parse(options, args);
@@ -58,10 +57,12 @@ public class App
             new HelpFormatter().printHelp("java -jar app-jar-with-dependencies.jar", options);
             return;
         }
-        // Change host and port is command line arguments were provided
+
+        // Change host if command line arguments was provided
         if(cmdLine.hasOption("host")){
             App.DB_HOST = cmdLine.getOptionValue("host");
         }
+        // Change port if command line argument was provided
         if(cmdLine.hasOption("port")){
             App.DB_PORT = Integer.parseInt(cmdLine.getOptionValue("port"));
         }
