@@ -1,0 +1,9 @@
+<report title="Population of a city">
+    <sql>
+        select cty.Name as Name, c.Name as Country, cty.District as District, cty.Population as Population from city cty inner join country c on cty.CountryCode = c.Code
+        where cty.Name = '%city%';
+    </sql>
+    <parameters>
+        <parameter name="city" prompt="Please enter a city eg. Georgetown"/>
+    </parameters>
+</report>

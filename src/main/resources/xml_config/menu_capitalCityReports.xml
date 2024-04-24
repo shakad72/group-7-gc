@@ -1,3 +1,0 @@
-<menu title="Capital City Reports" prompt="Please make a selection (P)">
-    <menuItem id="P" action="previous" >Previous Menu</menuItem>
-</menu>

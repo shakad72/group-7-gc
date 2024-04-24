@@ -1,9 +1,10 @@
 package com.napier.sem;
 
+import org.apache.commons.cli.*;
+
 import java.io.IOException;
 import java.net.URL;
 import java.sql.*;
-
 
 /**
  * Class containing the main static method.
@@ -14,10 +15,10 @@ public class App
     public static Connection con = null;
 
     // Host where world database is located
-    private static final String DB_HOST = "db";  // Change to db when deploying using docker compose
+    public static String DB_HOST = "db";  // Change to db when deploying using docker compose
 
     // Port to connect to MySQL database
-    private static final int DB_PORT = 3306;
+    private static int DB_PORT = 3306;
 
     // Login for MySQL database
     private static final String DB_LOGIN = "root";
@@ -27,6 +28,8 @@ public class App
 
     // Number of times application will attempt to connect to MySQL (will wait 30 seconds between attempts)
     private static final int DB_CONNECTION_ATTEMPTS = 10;
+
+    public static CommandLine cmdLine;
 
 
     /**
@@ -38,15 +41,40 @@ public class App
      */
     public static void main(String[] args)
     {
+        // Manage command line options
+        Options options = new Options()
+                .addOption("host",true,"Database host (default db)")
+                .addOption("port",true,"Database port (default 3306)")
+                .addOption("reportDefinition",true,"Report XML definition")
+                .addOption("reportParameter",true,"Input parameter for selected report (if required)");
+        // Instantiate command line parser
+        DefaultParser parser = new DefaultParser();
+        // Declare CommandLine variable
+//        CommandLine cmdLine;
+        // Attempt to parse command line arguments
+        try {
+            cmdLine = parser.parse(options, args);
+        } catch (ParseException e) {
+            new HelpFormatter().printHelp("java -jar app-jar-with-dependencies.jar", options);
+            return;
+        }
+        // Change host and port is command line arguments were provided
+        if(cmdLine.hasOption("host")){
+            App.DB_HOST = cmdLine.getOptionValue("host");
+        }
+        if(cmdLine.hasOption("port")){
+            App.DB_PORT = Integer.parseInt(cmdLine.getOptionValue("port"));
+        }
+
         // Attempt to connect to the database
         App.connect();
         // Was connection successful?
         if (App.con != null) {
             // Connection was successfully established!. If an argument was supplied (args[1]) then execute the report
-            if (args.length > 0) {
+            if (cmdLine.hasOption("reportDefinition")) {
                 // Enter non-interactive mode by executing the report in args[0]
                 try {
-                    new ReportHandler(args[0]);
+                    new ReportHandler(cmdLine.getOptionValue("reportDefinition"));
                 } catch (IOException e) {
                     System.out.println("Error: File not found at path " + args[0]);
                 }

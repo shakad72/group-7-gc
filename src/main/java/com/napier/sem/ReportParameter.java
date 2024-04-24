@@ -31,11 +31,16 @@ public class ReportParameter {
      * Method that will be called when requesting the parameter value from the user.
      */
     public void request(){
-        // Display the prompt
-        System.out.printf("%s: ", this.prompt);
-        // Wait for the user to enter a value
-        Scanner scanner = new Scanner(System.in);
-        this.value = scanner.nextLine();
+        // Grab parameter if provided as an argument
+        if(App.cmdLine.hasOption("reportParameter")){
+            this.value = App.cmdLine.getOptionValue("reportParameter");
+        }else{
+            // Display the prompt
+            System.out.printf("%s: ", this.prompt);
+            // Wait for the user to enter a value
+            Scanner scanner = new Scanner(System.in);
+            this.value = scanner.nextLine();
+        }
     }
 
 

@@ -1,0 +1,3 @@
+<report title="All the countries in the world organised by largest population to smallest">
+    <sql>select Code, Name, Continent, Region, Population, (select Name from city where ID=country.capital) as Capital from country order by Population desc</sql>
+</report>
